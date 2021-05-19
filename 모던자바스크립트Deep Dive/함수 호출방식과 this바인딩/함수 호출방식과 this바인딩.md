@@ -13,18 +13,13 @@ this바인딩은 함수 호출 방식, 즉 함수가 어떻게 호출되었는�
 
 함수를 호출하는 방식은 다음과 같다
 
-[1. 일반 함수 호출]
+[<1. 일반 함수 호출>](\1일반함수호출.md)
 
-(모던자바스크립트Deep&nbsp;Dive\함수&nbsp;호출방식과&nbsp;this바인딩\1일반함수호출.md)
+[<2. 메서드 호출>](\2메서드로호출.md)
 
-[2.메서드 호출]
-(모던자바스크립트Deep&nbsp;Dive\함수&nbsp;호출방식과&nbsp;this바인딩\2메서드로호출.md)
+[<3.생성자 함수 호출>](\3생성자함수로호출.md)
 
-[3.생성자 함수 호출]
-(모던자바스크립트Deep&nbsp;Dive\함수&nbsp;호출방식과&nbsp;this바인딩\3생성자함수로호출.md)
-
-[4.Function.prototype.apply/call/bind 메서드에 의한 간접 호출]
-(모던자바스크립트Deep&nbsp;Dive\함수&nbsp;호출방식과&nbsp;this바인딩\4protoTypeApplyBind.md)
+[<4.Function.prototype.apply/call/bind 메서드에 의한 간접 호출>](\4protoTypeApplyBind.md)
 
 ```python
 // this 바인딩은 함수 호출 방식에 따라 동적으로 결정된다.
@@ -56,3 +51,6 @@ foo.call(bar);   // bar
 foo.apply(bar);  // bar
 foo.bind(bar)(); // bar
 ```
+
+
+
