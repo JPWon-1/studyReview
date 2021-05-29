@@ -14,7 +14,7 @@ TCP/IP 프로토콜은 이기종 시스템간의 통신을 위한 표준 프로�
 
 TCP와 UDP 모두 TCP/IP 프로토콜에 포함되어 있으며, OSI 7계층의 전송계층에 해당하는 프로토콜이다.
 
-[TCP/UDP 비교](https://www.notion.so/64fc8c5a447948feae50d8ec7ca4e386)
+![TCP/UDP 비교](img/TCPvsUDP.png)
 
 # TCP소켓 프로그래밍
 
