@@ -1,10 +1,8 @@
 # Querydsl 적용하기
 
-Querydsl이란 JPQL의 빌더 역할을 하는 오픈 소스이다.
+`Querydsl이란 JPQL의 빌더 역할을 하는 오픈 소스이다.`
 
 # 사용 이유
-
----
 
 ## 1) type-safe
 
@@ -191,8 +189,6 @@ test {
     ```
 
 # 그 외 도움 사이트
-
----
 
 [[Querydsl] 다이나믹 쿼리 사용하기](https://jojoldu.tistory.com/394)
 

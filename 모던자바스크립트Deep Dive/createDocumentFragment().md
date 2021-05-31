@@ -1,19 +1,16 @@
 # Node 추가
 
-상태: 자바스크립트
-작성일시: 2021년 4월 28일 오전 12:10
-
 ```jsx
-			  const $fruits = document.getElementById('fruits');
-        const $container = document.createElement('div');
-        const $fragment = document.createDocumentFragment();
-        ['appple','banana','orange'].forEach(text=>{
-            const $li = document.createElement('li');
-            const textNode = document.createTextNode(text);
-            $li.appendChild(textNode);
-            $fragment.appendChild($li)
-        })
-        $fruits.appendChild($fragment)
+const $fruits = document.getElementById('fruits');
+const $container = document.createElement('div');
+const $fragment = document.createDocumentFragment();
+['appple','banana','orange'].forEach(text=>{
+    const $li = document.createElement('li');
+    const textNode = document.createTextNode(text);
+    $li.appendChild(textNode);
+    $fragment.appendChild($li)
+})
+$fruits.appendChild($fragment)
 ```
 
 fragment와 같이 빈 노드를 추가하는 식으로 불필요한 컨테이너를 생성하지 않고도 객체 추가할 수 있다.
