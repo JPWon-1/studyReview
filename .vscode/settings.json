@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "자바알고리즘"
+    ],
+    "java.debug.settings.console": "externalTerminal"
+}
