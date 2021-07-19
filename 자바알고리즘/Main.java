@@ -1,21 +1,32 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String a = scanner.next();
-        String changeCaseString = changeCase(a);
-        System.out.println(changeCaseString);
+        int n = scanner.nextInt();
+        String[] str = new String[n];
+        for (int i = 0; i < n; i++) {
+            str[i] = scanner.next();
+        }
+        for (String x : answer(n, str)) {
+            System.out.println(x);
+        }
     }
-    
-    public static String changeCase(String str){
-        String answer = "";
-        for(char x : str.toCharArray()){
-            if(x>=65 && x<=90){
-                answer += (char)(x+32);
-            }else if(x>=97 && x<=122){
-                answer += (char)(x-32);
+
+    public static ArrayList<String> answer(int n, String[] str) {
+        ArrayList<String> answer = new ArrayList<>();
+        for(String x : str){
+            char[] s = x.toCharArray();
+            int lt = 0, rt=x.length()-1;
+            while(lt<rt){
+                char tmp = s[lt];
+                s[lt] = s[rt];
+                s[rt] = tmp;
+                lt++; rt--;
             }
+            String tmp = String.valueOf(s);
+            answer.add(tmp);
         }
         return answer;
     }
