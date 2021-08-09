@@ -2,32 +2,27 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        String[] str = new String[n];
+        int[] intArray = new int[n];
         for (int i = 0; i < n; i++) {
-            str[i] = scanner.next();
+            intArray[i] = scanner.nextInt();
         }
-        for (String x : answer(n, str)) {
-            System.out.println(x);
-        }
+        System.out.println(answer(n, intArray));
+        
     }
 
-    public static ArrayList<String> answer(int n, String[] str) {
-        ArrayList<String> answer = new ArrayList<>();
-        for(String x : str){
-            char[] s = x.toCharArray();
-            int lt = 0, rt=x.length()-1;
-            while(lt<rt){
-                char tmp = s[lt];
-                s[lt] = s[rt];
-                s[rt] = tmp;
-                lt++; rt--;
+    public static int answer(int n, int[] intArray) {
+        int answer = 1, max = intArray[0];
+        for (int i = 0; i < n; i++) {
+            if(intArray[i]>max){
+                answer++;
+                max = intArray[i];
             }
-            String tmp = String.valueOf(s);
-            answer.add(tmp);
         }
         return answer;
+
     }
 }
