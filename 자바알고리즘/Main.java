@@ -1,8 +1,6 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -10,43 +8,24 @@ public class Main {
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
         }
-        for (int x : solution(n, arr)) {
-            System.out.print(x + " ");
+        for (int i : solution(arr)) {
+            System.out.print(i + " ");
         }
     }
 
-    public static ArrayList<Integer> solution(int n, int[] arr) {
-        ArrayList<Integer> answer = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            int tmp = arr[i];
-            int res = 0;
-            while (tmp > 0) {
-                int t = tmp % 10;
-                res = res * 10 + t;
-                tmp = tmp / 10;
+    public static int[] solution(int[] arr) {
+        int length = arr.length;
+        int[] result = new int[length];
+        for (int i = 0; i < length; i++) {
+            int rank = 1;
+            for (int j = 0; j < length; j++) {
+                if (arr[i] < arr[j]) {
+                    rank++;
+                }
             }
-            if (isPrime(res)) {
-                answer.add(res);
-            }
+            result[i] = rank;
         }
-        return answer;
+        return result;
     }
 
-    public static boolean isPrime(int num) {
-        if (num < 2) {
-            return false;
-        }
-        if (num == 2) {
-            return true;
-        }
-        if (num % 2 == 0) {
-            return false;
-        }
-        for (int i = 3; i < num; i += 2) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
 }
